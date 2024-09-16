@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react"
 import { Footer } from "./Components/Footer"
 import { Main } from "./Components/Main"
-import { SideBar } from "./Components/SideBar"
+
 import { SideBarData } from "./Components/SideBarData"
+
 
 
 function App() {
   const [data, setData] = useState(null);
   const [loading,setLoading] = useState(false);
   const [showModal,setShowModal] = useState(false);
+  
 
   function handleToggleModal(){
     setShowModal(!showModal);
   }
+
+
+  
+  
+
   useEffect(() => {
     const NASA_KEY = import.meta.env.VITE_NASA_API_KEY;
     
